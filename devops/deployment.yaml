@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ms-course
+  name: ms-student
   labels:
-    name: ms-course
+    name: ms-student
 spec:
   selector:
     matchLabels:
- courseme: ms-course
+      name: ms-student
   template:
     metadata:
       labels:
-        name: ms-course
+        name: ms-student
     spec:
       containers:
-        - name: ms-course
-          image: upc/ms-course
+        - name: ms-student
+          image: upc/ms-student
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
